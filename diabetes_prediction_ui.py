@@ -3,7 +3,7 @@ import streamlit as st
 import pickle
 
 def load_knn_model():
-    filename = "finalized_model_knn.sav"
+    filename = "finalized_model_random.sav"
     loaded_model = pickle.load(open(filename, 'rb'))
     return loaded_model
 
