@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import pickle
 
-def load_knn_model():
+def load_random_model():
     filename = "finalized_model_random.sav"
     loaded_model = pickle.load(open(filename, 'rb'))
     return loaded_model
@@ -23,7 +23,7 @@ This app predicts Diabetes using KNN model!
 st.sidebar.write("""
 ### User Input Features
 """)
-knn_model = load_knn_model()
+knn_model = load_random_model()
 
 name = st.sidebar.text_input("Enter your name:")
 age = st.sidebar.slider("Enter your age", min_value = 0, max_value = 100, value = 24)
@@ -36,17 +36,6 @@ bmi = st.sidebar.text_input("Enter your bmi:")
 diabetes_pedigree_fn = st.sidebar.text_input("DiabetesPedigreeFunction:")
 
 predict_btn = st.sidebar.button("Predict") 
-
-test_data1 = pd.DataFrame({
-    "Pregnancies": [5]
-    , "Glucose": [88.0]
-    , "BloodPressure": [66.0]
-    , "SkinThickness": [21.0]
-    , "Insulin": [23.0]
-    , "BMI": [24.4]
-    , "DiabetesPedigreeFunction": [0.342]
-    , "Age": [30]
-})
 
 test_data = pd.DataFrame({
     "Pregnancies": [int(pregnancies) if len(pregnancies) else 0]
