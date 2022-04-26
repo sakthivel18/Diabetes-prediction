@@ -16,7 +16,7 @@ st.write("""
 
 st.markdown("""
 This app predicts Diabetes using Random Forest model!
-* **Python libraries:** streamlit
+* **Python libraries:** streamlit, pandas
 * **Data source:** [diabetes-dataset](https://www.kaggle.com/datasets/mathchi/diabetes-data-set).
 """)
 
