@@ -15,9 +15,9 @@ st.write("""
 """)
 
 st.markdown("""
-This app predicts Diabetes using KNN model!
+This app predicts Diabetes using Random Forest model!
 * **Python libraries:** streamlit
-* **Data source:** [diabetes-dataset](https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset).
+* **Data source:** [diabetes-dataset](https://www.kaggle.com/datasets/mathchi/diabetes-data-set).
 """)
 
 st.sidebar.write("""
